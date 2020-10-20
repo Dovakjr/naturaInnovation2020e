@@ -213,22 +213,6 @@
           ],
           "elseActions": [
             {
-              "$kind": "Microsoft.SetProperty",
-              "$designer": {
-                "id": "A9fQXl"
-              },
-              "property": "user.valorTotal",
-              "value": "=0"
-            },
-            {
-              "$kind": "Microsoft.SetProperty",
-              "$designer": {
-                "id": "ts0DNA"
-              },
-              "property": "user.pontosTotal",
-              "value": "=0"
-            },
-            {
               "$kind": "Microsoft.Foreach",
               "$designer": {
                 "id": "8p0slS"

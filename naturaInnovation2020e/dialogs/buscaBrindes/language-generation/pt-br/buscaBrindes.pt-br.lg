@@ -2,8 +2,17 @@
 
 
 
-# SendActivity_zYqaK8()
-- teste
+# SendActivity_snvHMy()
+-Faltaram alguns pontos para você conseguir resgatar brindes neste ciclo.
+# SendActivity_QzQogy()
+- Sua pontuação total foi: ${user.pontosTotal}
+# SendActivity_M6DMih()
+- Ok! 
 
-# SendActivity_6Th02E()
-- Que pena T_T. Sua pontuação não deu direito a nenhum brinde deste ciclo.
+
+# TextInput_Prompt_XeSGnn()
+- Deseja adicionar mais produtos?
+# SendActivity_pMOG8d()
+-  -${dialog.foreach.value.nome_brinde}
+# SendActivity_arPrPM()
+- Com essa compra esses são os brindes que você já ganhou:

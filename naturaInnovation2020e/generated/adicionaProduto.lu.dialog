@@ -2,8 +2,8 @@
     "$kind": "Microsoft.MultiLanguageRecognizer",
     "id": "LUIS_adicionaProduto",
     "recognizers": {
+        "en-us": "adicionaProduto.en-us.lu",
         "pt-br": "adicionaProduto.pt-br.lu",
-        "": "adicionaProduto.pt-br.lu",
-        "en-us": "adicionaProduto.en-us.lu"
+        "": "adicionaProduto.pt-br.lu"
     }
 }

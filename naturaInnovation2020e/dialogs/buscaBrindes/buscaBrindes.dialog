@@ -17,18 +17,139 @@
       },
       "actions": [
         {
-          "$kind": "Microsoft.SendActivity",
+          "$kind": "Microsoft.IfCondition",
           "$designer": {
-            "id": "zYqaK8"
+            "id": "CBUul4"
           },
-          "activity": "${SendActivity_zYqaK8()}"
-        },
-        {
-          "$kind": "Microsoft.SendActivity",
-          "$designer": {
-            "id": "6Th02E"
-          },
-          "activity": "${SendActivity_6Th02E()}"
+          "condition": "user.pontosTotal >= 60",
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "snvHMy"
+              },
+              "activity": "${SendActivity_snvHMy()}"
+            },
+            {
+              "$kind": "Microsoft.TextInput",
+              "$designer": {
+                "id": "XeSGnn"
+              },
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "prompt": "${TextInput_Prompt_XeSGnn()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "dialog.escolha"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "JBbbJ9"
+              },
+              "condition": "dialog.escolha == \"sim\"",
+              "actions": [
+                {
+                  "$kind": "Microsoft.BeginDialog",
+                  "$designer": {
+                    "id": "DGVSuI"
+                  },
+                  "activityProcessed": true,
+                  "dialog": "adicionaProduto"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "M6DMih"
+                  },
+                  "activity": "${SendActivity_M6DMih()}"
+                }
+              ]
+            }
+          ],
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "QzQogy"
+              },
+              "activity": "${SendActivity_QzQogy()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "arPrPM"
+              },
+              "activity": "${SendActivity_arPrPM()}"
+            },
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "St2kfQ"
+              },
+              "method": "GET",
+              "resultProperty": "dialog.listaBrindes",
+              "contentType": "application/json",
+              "responseType": "json",
+              "url": "https://naturabot.herokuapp.com/brindes"
+            },
+            {
+              "$kind": "Microsoft.Foreach",
+              "$designer": {
+                "id": "AVVLB2"
+              },
+              "index": "dialog.foreach.index",
+              "value": "dialog.foreach.value",
+              "itemsProperty": "dialog.listaBrindes.content",
+              "actions": [
+                {
+                  "$kind": "Microsoft.IfCondition",
+                  "$designer": {
+                    "id": "IkqSBi"
+                  },
+                  "condition": "dialog.foreach.value.pontuacao <= user.pontosTotal",
+                  "actions": [
+                    {
+                      "$kind": "Microsoft.SendActivity",
+                      "$designer": {
+                        "id": "pMOG8d"
+                      },
+                      "activity": "${SendActivity_pMOG8d()}"
+                    },
+                    {
+                      "$kind": "Microsoft.SetProperty",
+                      "$designer": {
+                        "id": "dzbUMM"
+                      },
+                      "value": {
+                        "nomeProduto": "${dialog.foreach.value.nome_brinde}",
+                        "quantidadeProduto": "1",
+                        "pontosProduto": "0",
+                        "valorProduto": "0",
+                        "totalProduto": "0",
+                        "totalPontosProdutos": "0"
+                      },
+                      "property": "user.productObject"
+                    },
+                    {
+                      "$kind": "Microsoft.EditArray",
+                      "$designer": {
+                        "id": "lg3PxO"
+                      },
+                      "changeType": "push",
+                      "itemsProperty": "user.listaProdutos",
+                      "value": "=user.productObject"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
         },
         {
           "$kind": "Microsoft.BeginDialog",
@@ -38,8 +159,7 @@
           "activityProcessed": true,
           "dialog": "resgataPontos"
         }
-      ],
-      "condition": "dialog.forea"
+      ]
     }
   ],
   "generator": "buscaBrindes.lg",

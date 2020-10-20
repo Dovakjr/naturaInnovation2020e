@@ -17,6 +17,22 @@
       },
       "actions": [
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "TIvAq0"
+          },
+          "property": "user.valorTotal",
+          "value": "=0"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "M8Xatw"
+          },
+          "property": "user.pontosTotal",
+          "value": "=0"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "0Egv74"

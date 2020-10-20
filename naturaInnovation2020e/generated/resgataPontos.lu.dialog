@@ -2,8 +2,8 @@
     "$kind": "Microsoft.MultiLanguageRecognizer",
     "id": "LUIS_resgataPontos",
     "recognizers": {
+        "en-us": "resgataPontos.en-us.lu",
         "pt-br": "resgataPontos.pt-br.lu",
-        "": "resgataPontos.pt-br.lu",
-        "en-us": "resgataPontos.en-us.lu"
+        "": "resgataPontos.pt-br.lu"
     }
 }
