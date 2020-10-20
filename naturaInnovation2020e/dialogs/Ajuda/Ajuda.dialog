@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "hWztwv",
+    "name": "Ajuda",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "TXvGWY"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "WrUlf3"
+          },
+          "activity": "${SendActivity_WrUlf3()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Ajuda.lg",
+  "recognizer": "Ajuda.lu.qna",
+  "id": "Ajuda"
+}

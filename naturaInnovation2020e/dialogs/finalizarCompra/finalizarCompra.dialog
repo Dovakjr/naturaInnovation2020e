@@ -1,0 +1,24 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "S3g4vh",
+    "name": "finalizarCompra",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "tHt9Eb"
+      },
+      "actions": []
+    }
+  ],
+  "generator": "finalizarCompra.lg",
+  "recognizer": "finalizarCompra.lu.qna",
+  "id": "finalizarCompra"
+}

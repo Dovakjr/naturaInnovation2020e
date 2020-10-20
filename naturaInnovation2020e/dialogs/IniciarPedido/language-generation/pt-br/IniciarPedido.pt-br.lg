@@ -1,0 +1,19 @@
+[import](common.lg)
+
+# SendActivity_0Egv74()
+- OK, vamos começar. 
+# SendActivity_O2vpFG()
+- Estamos iniciando o ciclo 2020/16
+# SendActivity_h15TDi()
+-Eu te guiarei no processo de compra dos produtos, para isso basta responder as perguntas e seguir a instruções. 
+# SendActivity_6DB1ew()
+-Antes de começar, preciso que você separe os códigos dos produtos e as quantidades.
+# SendActivity_f6FMBR()
+-Quando estiver pronta (o), é só seguir o passo a passo. 
+
+# CardCiclo()
+[HeroCard
+    image =https://imgur.com/rx2ZmwJ.png
+]
+# SendActivity_uey7mr()
+-${CardCiclo()}

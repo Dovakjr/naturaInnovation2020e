@@ -1,0 +1,10 @@
+[import](common.lg)
+
+# SendActivity_gRKArv()
+- Esse é o resumo do seu pedido até agora:
+# SendActivity_Ip8a2c()
+-Pontuação total: ${user.pontosTotal}
+# SendActivity_QsbGls()
+- Total a pagar:  R$ ${user.valorTotal}
+# SendActivity_NjF4Rl()
+- ${dialog.foreach.value.quantidadeProduto}x ${dialog.foreach.value.nomeProduto}, R$ ${dialog.foreach.value.totalProduto}

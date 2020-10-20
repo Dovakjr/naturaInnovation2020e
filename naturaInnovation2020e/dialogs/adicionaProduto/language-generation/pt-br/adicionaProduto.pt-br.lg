@@ -1,0 +1,16 @@
+[import](common.lg)
+
+# TextInput_Prompt_C07612()
+- Digite o código do produto: 
+# TextInput_Prompt_WlV7cv()
+- Deseja adicionar mais um produto?
+# NumberInput_Prompt_SGu8Ki()
+- Agora digite a quantidade: 
+# SendActivity_rB39ZN()
+- Esse código de produto é inválido, poderia digitar novamente?!
+# SendActivity_pLIAhJ()
+-${dialog.qntdProduto}x ${dialog.infoProduto.content[0].nome_produto}.
+# TextInput_Prompt_wm9sTU()
+- As informações do produto estão corretas?
+# SendActivity_sqLlQW()
+- Produto não adicionado.

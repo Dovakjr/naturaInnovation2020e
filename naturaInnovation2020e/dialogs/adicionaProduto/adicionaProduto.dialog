@@ -1,0 +1,275 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "3qtkzK",
+    "name": "adicionaProduto",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "CTLrAx"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "C07612"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_C07612()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.codProduto"
+        },
+        {
+          "$kind": "Microsoft.HttpRequest",
+          "$designer": {
+            "id": "G7hZJX"
+          },
+          "method": "GET",
+          "resultProperty": "dialog.checkProdutos",
+          "contentType": "application/json",
+          "responseType": "json",
+          "url": "https://naturabot.herokuapp.com/produtoscheck/${user.codProduto}"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "2Dgegr"
+          },
+          "condition": "dialog.checkProdutos.content[0].valida == \"TRUE\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.HttpRequest",
+              "$designer": {
+                "id": "pNRjb4"
+              },
+              "method": "GET",
+              "url": "https://naturabot.herokuapp.com/produtos/${user.codProduto}",
+              "resultProperty": "dialog.infoProduto"
+            },
+            {
+              "$kind": "Microsoft.NumberInput",
+              "$designer": {
+                "id": "SGu8Ki"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": true,
+              "allowInterruptions": false,
+              "prompt": "${NumberInput_Prompt_SGu8Ki()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "dialog.qntdProduto"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "rB39ZN"
+              },
+              "activity": "${SendActivity_rB39ZN()}"
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "QQuZaa"
+              },
+              "activityProcessed": false,
+              "allowLoop": true
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "pLIAhJ"
+          },
+          "activity": "${SendActivity_pLIAhJ()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "wm9sTU"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_wm9sTU()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.confirmaProduto"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "kjVxyN"
+          },
+          "condition": "user.confirmaProduto == \"sim\"  || user.confirmaProduto == \"Sim\" ",
+          "actions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "tyZZSx"
+              },
+              "property": "dialog.totalProduto",
+              "value": "=dialog.qntdProduto * dialog.infoProduto.content[0].preco"
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "0t8p7Q"
+              },
+              "property": "dialog.totalPontosProdutos",
+              "value": "=dialog.qntdProduto * dialog.infoProduto.content[0].pontos"
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "h8Dlq5"
+              },
+              "value": {
+                "nomeProduto": "${dialog.infoProduto.content[0].nome_produto}",
+                "quantidadeProduto": "${dialog.qntdProduto}",
+                "pontosProduto": "${dialog.infoProduto.content[0].pontos}",
+                "valorProduto": "${dialog.infoProduto.content[0].preco}",
+                "totalProduto": "${dialog.totalProduto}",
+                "totalPontosProdutos": "${dialog.totalPontosProdutos}"
+              },
+              "property": "user.productObject"
+            },
+            {
+              "$kind": "Microsoft.EditArray",
+              "$designer": {
+                "id": "CDkj4k"
+              },
+              "changeType": "push",
+              "itemsProperty": "user.listaProdutos",
+              "value": "=user.productObject"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "sqLlQW"
+              },
+              "activity": "${SendActivity_sqLlQW()}"
+            },
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "aVmZNq"
+              },
+              "activityProcessed": true
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "WlV7cv"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_WlV7cv()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.escolha"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "udhKdY"
+          },
+          "condition": "user.escolha == \"sim\" ",
+          "actions": [
+            {
+              "$kind": "Microsoft.RepeatDialog",
+              "$designer": {
+                "id": "Bq2Ifj"
+              },
+              "activityProcessed": true,
+              "allowLoop": true
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "A9fQXl"
+              },
+              "property": "user.valorTotal",
+              "value": "=0"
+            },
+            {
+              "$kind": "Microsoft.SetProperty",
+              "$designer": {
+                "id": "ts0DNA"
+              },
+              "property": "user.pontosTotal",
+              "value": "=0"
+            },
+            {
+              "$kind": "Microsoft.Foreach",
+              "$designer": {
+                "id": "8p0slS"
+              },
+              "index": "dialog.foreach.index",
+              "value": "dialog.foreach.value",
+              "itemsProperty": "user.listaProdutos",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "IxKV1g"
+                  },
+                  "property": "user.valorTotal",
+                  "value": "=user.valorTotal +  float(dialog.foreach.value.totalProduto)"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "qq3pCY"
+                  },
+                  "property": "user.pontosTotal",
+                  "value": "=user.pontosTotal + int(dialog.foreach.value.totalPontosProdutos)"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "pG4RmL"
+              },
+              "activityProcessed": true,
+              "dialog": "mostraResumo"
+            }
+          ]
+        }
+      ],
+      "runOnce": false
+    }
+  ],
+  "generator": "adicionaProduto.lg",
+  "recognizer": "adicionaProduto.lu.qna",
+  "id": "adicionaProduto"
+}

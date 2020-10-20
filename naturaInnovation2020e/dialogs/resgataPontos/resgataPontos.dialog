@@ -1,0 +1,175 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "1DXKak",
+    "name": "resgataPontos",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "I3mTwo"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "vNgi5g"
+          },
+          "activity": "${SendActivity_vNgi5g()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "dyk6mE"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_dyk6mE()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.escolha"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "F5vt1B"
+          },
+          "condition": "user.escolha == \"sim\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "vHWKdw"
+              },
+              "activity": "${SendActivity_vHWKdw()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "6lOEd6"
+              },
+              "activity": "${SendActivity_6lOEd6()}"
+            },
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "cER8kq"
+              },
+              "activity": "${SendActivity_cER8kq()}"
+            },
+            {
+              "$kind": "Microsoft.NumberInput",
+              "$designer": {
+                "id": "NrlqmK"
+              },
+              "defaultLocale": "en-us",
+              "disabled": false,
+              "maxTurnCount": 3,
+              "alwaysPrompt": false,
+              "allowInterruptions": false,
+              "prompt": "${NumberInput_Prompt_NrlqmK()}",
+              "unrecognizedPrompt": "",
+              "invalidPrompt": "",
+              "defaultValueResponse": "",
+              "property": "user.resgate"
+            },
+            {
+              "$kind": "Microsoft.IfCondition",
+              "$designer": {
+                "id": "LKapNi"
+              },
+              "condition": "user.resgate == 1",
+              "actions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "581s2z"
+                  },
+                  "activity": "${SendActivity_581s2z()}"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "NXuYkQ"
+                  },
+                  "value": {
+                    "nomeProduto": "Revista Espaço Natura ciclo 2015",
+                    "quantidadeProduto": "1",
+                    "pontosProduto": "0",
+                    "valorProduto": "0",
+                    "totalProduto": "0",
+                    "totalPontosProdutos": "0"
+                  },
+                  "property": "user.productObject"
+                }
+              ],
+              "elseActions": [
+                {
+                  "$kind": "Microsoft.SendActivity",
+                  "$designer": {
+                    "id": "h5fP6h"
+                  },
+                  "activity": "${SendActivity_h5fP6h()}"
+                },
+                {
+                  "$kind": "Microsoft.SetProperty",
+                  "$designer": {
+                    "id": "06gMJp"
+                  },
+                  "value": {
+                    "nomeProduto": "Biografia AAS des col masc. 3x 1ml",
+                    "quantidadeProduto": "1",
+                    "pontosProduto": "0",
+                    "valorProduto": "0",
+                    "totalProduto": "0",
+                    "totalPontosProdutos": "0"
+                  },
+                  "property": "user.productObject"
+                }
+              ]
+            },
+            {
+              "$kind": "Microsoft.EditArray",
+              "$designer": {
+                "id": "hGi7jQ"
+              },
+              "changeType": "push",
+              "itemsProperty": "user.listaProdutos",
+              "value": "=user.productObject"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "A0szqB"
+              },
+              "activityProcessed": true,
+              "dialog": "formasPagamento"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "Ng9o0u"
+              },
+              "activityProcessed": true,
+              "dialog": "formasPagamento"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "resgataPontos.lg",
+  "recognizer": "resgataPontos.lu.qna",
+  "id": "resgataPontos"
+}

@@ -1,0 +1,32 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "1yU41w",
+    "name": "Cancelar",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qoU4Pg"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "GdrBhA"
+          },
+          "activity": "${SendActivity_GdrBhA()}"
+        }
+      ]
+    }
+  ],
+  "generator": "Cancelar.lg",
+  "recognizer": "Cancelar.lu.qna",
+  "id": "Cancelar"
+}

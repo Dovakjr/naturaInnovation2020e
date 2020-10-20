@@ -1,0 +1,95 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "eH8H52",
+    "name": "buscaPromo",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "l8A7te"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "7HcEV4"
+          },
+          "activity": "${SendActivity_7HcEV4()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "jh83iH"
+          },
+          "activity": "${SendActivity_jh83iH()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "XxQy3v"
+          },
+          "activity": "${SendActivity_XxQy3v()}"
+        },
+        {
+          "$kind": "Microsoft.TextInput",
+          "$designer": {
+            "id": "j0zm3t"
+          },
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": true,
+          "allowInterruptions": false,
+          "prompt": "${TextInput_Prompt_j0zm3t()}",
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "dialog.escolha"
+        },
+        {
+          "$kind": "Microsoft.IfCondition",
+          "$designer": {
+            "id": "FQmn0G"
+          },
+          "condition": "dialog.escolha == \"sim\"",
+          "actions": [
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "JoUxIA"
+              },
+              "activityProcessed": true,
+              "dialog": "buscaBrindes"
+            }
+          ],
+          "elseActions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "l13hih"
+              },
+              "activity": "${SendActivity_l13hih()}"
+            },
+            {
+              "$kind": "Microsoft.BeginDialog",
+              "$designer": {
+                "id": "6EKCxr"
+              },
+              "activityProcessed": true,
+              "dialog": "adicionaProduto"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "generator": "buscaPromo.lg",
+  "recognizer": "buscaPromo.lu.qna",
+  "id": "buscaPromo"
+}

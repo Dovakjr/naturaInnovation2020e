@@ -1,0 +1,75 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "AIP6IG",
+    "name": "IniciarPedido",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "pEdiD2"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "0Egv74"
+          },
+          "activity": "${SendActivity_0Egv74()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "O2vpFG"
+          },
+          "activity": "${SendActivity_O2vpFG()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "uey7mr"
+          },
+          "activity": "${SendActivity_uey7mr()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "6DB1ew"
+          },
+          "activity": "${SendActivity_6DB1ew()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "h15TDi"
+          },
+          "activity": "${SendActivity_h15TDi()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "f6FMBR"
+          },
+          "activity": "${SendActivity_f6FMBR()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "X52eiy"
+          },
+          "activityProcessed": true,
+          "dialog": "adicionaProduto"
+        }
+      ]
+    }
+  ],
+  "generator": "IniciarPedido.lg",
+  "recognizer": "IniciarPedido.lu.qna",
+  "id": "IniciarPedido"
+}

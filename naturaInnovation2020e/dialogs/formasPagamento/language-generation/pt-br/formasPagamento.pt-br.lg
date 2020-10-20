@@ -1,0 +1,37 @@
+[import](common.lg)
+
+# SendActivity_C8Snno()
+-Aqui está o resumo do pedido com os produtos regatados:
+# SendActivity_w4Sxjs()
+-Para esta compra a única forma de pagamento disponível é o boleto bancário!
+
+# SendActivity_qnh5db()
+-Selecione a condição de parcelamento através dos numeros correspondentes:
+# SendActivity_eHpm4I()
+-Opção 3 - 5x no boleto com vencimento para 30, 60, 90, 120 e 150 dias. R$ ${dialog.parcelas5},00
+
+
+
+
+
+
+# SendActivity_cOF669()
+-${dialog.foreach.value.quantidadeProduto}x ${dialog.foreach.value.nomeProduto}, R$ ${dialog.foreach.value.totalProduto},00
+
+# NumberInput_Prompt_imaeoU()
+- Digite o número correspondente:
+# SendActivity_QWG4c6()
+-Pedido enviado a Natura com sucesso! Aguarde o faturamento e processamento do pedido.
+
+# SendActivity_R07OIL()
+-Obrigado, conte com a gente!
+# SendActivity_UxZhzR()
+-Opção 2 - 3x no boleto com vencimento para  30, 60 e 90 dias. R$ ${dialog.parcelas3},00
+# SendActivity_xaX1KP()
+-Opção 1 - 1x no boleto com vencimento para  30 dias.  R$ ${user.valorTotal},00
+
+
+# SendActivity_STISTq()
+- O boleto será enviado com o pedido.
+# SendActivity_iIIq8U()
+- O número do pedido é: 923482445

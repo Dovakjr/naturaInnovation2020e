@@ -1,0 +1,24 @@
+[import](common.lg)
+
+# SendActivity_7HcEV4()
+-Antes de finalizar, aqui estão alguns intens que podem te interessar:
+# ConfirmInput_Prompt_UJKg4s()
+- Deseja finalizar a compra?
+# TextInput_Prompt_j0zm3t()
+- Deseja finalizar a compra?
+# SendActivity_l13hih()
+- Ok! Vamos adicionar mais produtos
+
+# CardPromo1()
+[HeroCard
+    image =https://i.imgur.com/DTXy3zN.png
+]
+
+# CardPromo2()
+[HeroCard
+    image =https://imgur.com/Cr5r41V.png
+]
+# SendActivity_jh83iH()
+-${CardPromo1()}
+# SendActivity_XxQy3v()
+-${CardPromo2()}

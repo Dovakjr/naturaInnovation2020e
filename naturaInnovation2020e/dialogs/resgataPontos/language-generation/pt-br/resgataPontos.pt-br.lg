@@ -1,0 +1,20 @@
+[import](common.lg)
+
+# SendActivity_vNgi5g()
+-Você conseguiu ${user.pontosTotal} pontos de compra. Vimos que você possui 1 ponto de resgate disponível para uso.
+# TextInput_Prompt_dyk6mE()
+- Deseja resgata-lo agora?
+# SendActivity_6lOEd6()
+- 1 - Revista Espaço Natura ciclo 202015, 1 ponto;
+
+# SendActivity_cER8kq()
+- 2 - Biografia ASS des col masc. 3x 1ml, 1 ponto;
+
+# SendActivity_vHWKdw()
+- Esses são os produtos disponíveis para resgate, para escolher basta digitar o número correspondente.
+# SendActivity_581s2z()
+- Revista Espaço Natura ciclo 2015 - Adicionado.
+# SendActivity_h5fP6h()
+- Biografia ASS des col masc. 3x 1ml - Adicionado.
+# NumberInput_Prompt_NrlqmK()
+- Digite a opção desejada:

@@ -1,0 +1,9 @@
+{
+    "$kind": "Microsoft.MultiLanguageRecognizer",
+    "id": "LUIS_buscaPromo",
+    "recognizers": {
+        "pt-br": "buscaPromo.pt-br.lu",
+        "": "buscaPromo.pt-br.lu",
+        "en-us": "buscaPromo.en-us.lu"
+    }
+}

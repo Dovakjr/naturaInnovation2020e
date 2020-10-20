@@ -1,0 +1,72 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "avKYxI",
+    "name": "mostraResumo",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "KD31XB"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "gRKArv"
+          },
+          "activity": "${SendActivity_gRKArv()}"
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "3z11Fr"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "user.listaProdutos",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "NjF4Rl"
+              },
+              "activity": "${SendActivity_NjF4Rl()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "QsbGls"
+          },
+          "activity": "${SendActivity_QsbGls()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "Ip8a2c"
+          },
+          "activity": "${SendActivity_Ip8a2c()}"
+        },
+        {
+          "$kind": "Microsoft.BeginDialog",
+          "$designer": {
+            "id": "TzpkOW"
+          },
+          "activityProcessed": true,
+          "dialog": "buscaPromo"
+        }
+      ]
+    }
+  ],
+  "generator": "mostraResumo.lg",
+  "recognizer": "mostraResumo.lu.qna",
+  "id": "mostraResumo"
+}

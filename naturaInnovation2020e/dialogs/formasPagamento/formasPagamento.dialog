@@ -1,0 +1,151 @@
+{
+  "$kind": "Microsoft.AdaptiveDialog",
+  "$designer": {
+    "id": "LJB92O",
+    "name": "formasPagamento",
+    "description": ""
+  },
+  "autoEndDialog": true,
+  "defaultResultProperty": "dialog.result",
+  "triggers": [
+    {
+      "$kind": "Microsoft.OnBeginDialog",
+      "$designer": {
+        "name": "BeginDialog",
+        "description": "",
+        "id": "qmUMOD"
+      },
+      "actions": [
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "C8Snno"
+          },
+          "activity": "${SendActivity_C8Snno()}"
+        },
+        {
+          "$kind": "Microsoft.Foreach",
+          "$designer": {
+            "id": "2LcpEV"
+          },
+          "index": "dialog.foreach.index",
+          "value": "dialog.foreach.value",
+          "itemsProperty": "user.listaProdutos",
+          "actions": [
+            {
+              "$kind": "Microsoft.SendActivity",
+              "$designer": {
+                "id": "cOF669"
+              },
+              "activity": "${SendActivity_cOF669()}"
+            }
+          ]
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "w4Sxjs"
+          },
+          "activity": "${SendActivity_w4Sxjs()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "qnh5db"
+          },
+          "activity": "${SendActivity_qnh5db()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "xaX1KP"
+          },
+          "activity": "${SendActivity_xaX1KP()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "HUJC1V"
+          },
+          "property": "dialog.parcelas3",
+          "value": "=user.valorTotal /3"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "UxZhzR"
+          },
+          "activity": "${SendActivity_UxZhzR()}"
+        },
+        {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "ZyfZS2"
+          },
+          "property": "dialog.parcelas5",
+          "value": "=user.valorTotal /5"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "eHpm4I"
+          },
+          "activity": "${SendActivity_eHpm4I()}"
+        },
+        {
+          "$kind": "Microsoft.NumberInput",
+          "$designer": {
+            "id": "imaeoU"
+          },
+          "defaultLocale": "en-us",
+          "disabled": false,
+          "maxTurnCount": 3,
+          "alwaysPrompt": false,
+          "allowInterruptions": false,
+          "unrecognizedPrompt": "",
+          "invalidPrompt": "",
+          "defaultValueResponse": "",
+          "property": "user.opcaoPagamento",
+          "prompt": "${NumberInput_Prompt_imaeoU()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "QWG4c6"
+          },
+          "activity": "${SendActivity_QWG4c6()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "iIIq8U"
+          },
+          "activity": "${SendActivity_iIIq8U()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "STISTq"
+          },
+          "activity": "${SendActivity_STISTq()}"
+        },
+        {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "R07OIL"
+          },
+          "activity": "${SendActivity_R07OIL()}"
+        },
+        {
+          "$kind": "Microsoft.EndDialog",
+          "$designer": {
+            "id": "L3giTl"
+          }
+        }
+      ]
+    }
+  ],
+  "generator": "formasPagamento.lg",
+  "recognizer": "formasPagamento.lu.qna",
+  "id": "formasPagamento"
+}
