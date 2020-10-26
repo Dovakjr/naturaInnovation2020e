@@ -111,9 +111,9 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "QWG4c6"
+            "id": "c982bX"
           },
-          "activity": "${SendActivity_QWG4c6()}"
+          "activity": "${SendActivity_c982bX()}"
         },
         {
           "$kind": "Microsoft.SendActivity",
@@ -125,16 +125,16 @@
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "STISTq"
+            "id": "kWygDt"
           },
-          "activity": "${SendActivity_STISTq()}"
+          "activity": "${SendActivity_kWygDt()}"
         },
         {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
-            "id": "R07OIL"
+            "id": "NLBFQy"
           },
-          "activity": "${SendActivity_R07OIL()}"
+          "activity": "${SendActivity_NLBFQy()}"
         },
         {
           "$kind": "Microsoft.EndDialog",

@@ -13,7 +13,7 @@
 
 # CardCiclo()
 [HeroCard
-    image =https://imgur.com/rx2ZmwJ.png
+    image =https://i.imgur.com/rx2ZmwJ.png?1
 ]
 # SendActivity_uey7mr()
 -${CardCiclo()}

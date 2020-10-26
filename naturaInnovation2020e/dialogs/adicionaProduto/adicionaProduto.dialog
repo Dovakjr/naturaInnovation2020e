@@ -101,6 +101,13 @@
           "activity": "${SendActivity_pLIAhJ()}"
         },
         {
+          "$kind": "Microsoft.SendActivity",
+          "$designer": {
+            "id": "5sD1iW"
+          },
+          "activity": "${SendActivity_5sD1iW()}"
+        },
+        {
           "$kind": "Microsoft.TextInput",
           "$designer": {
             "id": "wm9sTU"

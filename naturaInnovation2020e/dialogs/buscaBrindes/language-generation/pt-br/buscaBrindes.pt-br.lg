@@ -13,6 +13,6 @@
 # TextInput_Prompt_XeSGnn()
 - Deseja adicionar mais produtos?
 # SendActivity_pMOG8d()
--  -${dialog.foreach.value.nome_brinde}
+-  1x ${formatNumber(dialog.foreach.value.nome_brinde,2)}
 # SendActivity_arPrPM()
 - Com essa compra esses são os brindes que você já ganhou:

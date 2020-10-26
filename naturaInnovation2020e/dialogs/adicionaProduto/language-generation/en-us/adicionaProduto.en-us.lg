@@ -14,3 +14,9 @@
 - As informações do produto estão corretas?
 # SendActivity_sqLlQW()
 - Produto não adicionado.
+# CardProduto(url)
+[HeroCard
+    image = ${url}
+]
+# SendActivity_5sD1iW()
+- ${CardProduto(dialog.infoProduto.content[0].imagem)}

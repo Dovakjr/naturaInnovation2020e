@@ -1,14 +1,14 @@
 {
     "luis": {
         "buscaBrindes_pt_br_lu": "12bd0786-8b2d-4f73-bab2-7dc09b84db29",
-        "adicionaProduto_en_us_lu": "43c8a5a3-8e88-4e1e-bd93-401f5a2bfa95",
-        "buscaBrindes_en_us_lu": "335c2b8b-251b-4f18-8055-b070f510dc6c",
-        "buscaPromo_en_us_lu": "a29ee8df-3ad9-4351-9ab0-9bf93039282c",
         "adicionaProduto_pt_br_lu": "edc68a0a-7cbd-4859-8bb3-d19ceb27856e",
+        "adicionaProduto_en_us_lu": "43c8a5a3-8e88-4e1e-bd93-401f5a2bfa95",
+        "buscaPromo_en_us_lu": "a29ee8df-3ad9-4351-9ab0-9bf93039282c",
+        "buscaBrindes_en_us_lu": "335c2b8b-251b-4f18-8055-b070f510dc6c",
         "resgataPontos_en_us_lu": "e58352d5-7bea-4462-adef-7473522cf41f",
+        "buscaPromo_pt_br_lu": "243c18a1-5fd9-4deb-ab30-2f8da385b8d7",
         "naturainnovation2020e_pt_br_lu": "25f4f8dd-9150-4e9e-aab1-857b6683b578",
         "naturainnovation2020e_en_us_lu": "25f1c215-0011-4032-9faa-3ec5d700c388",
-        "resgataPontos_pt_br_lu": "a7009b67-8ec1-46a1-b169-6fc6b1bcda33",
-        "buscaPromo_pt_br_lu": "243c18a1-5fd9-4deb-ab30-2f8da385b8d7"
+        "resgataPontos_pt_br_lu": "a7009b67-8ec1-46a1-b169-6fc6b1bcda33"
     }
 }

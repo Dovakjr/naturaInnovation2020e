@@ -8,30 +8,27 @@
 # SendActivity_qnh5db()
 -Selecione a condição de parcelamento através dos numeros correspondentes:
 # SendActivity_eHpm4I()
--Opção 3 - 5x no boleto com vencimento para 30, 60, 90, 120 e 150 dias. R$ ${dialog.parcelas5},00
-
-
-
-
-
+-Opção 3 - 5x no boleto com vencimento para 30, 60, 90, 120 e 150 dias. R$ ${formatNumber(dialog.parcelas5,2)}
 
 # SendActivity_cOF669()
--${dialog.foreach.value.quantidadeProduto}x ${dialog.foreach.value.nomeProduto}, R$ ${dialog.foreach.value.totalProduto},00
+-${dialog.foreach.value.quantidadeProduto}x ${dialog.foreach.value.nomeProduto}, R$ ${formatNumber(float(dialog.foreach.value.totalProduto),2)}
 
-# NumberInput_Prompt_imaeoU()
-- Digite o número correspondente:
-# SendActivity_QWG4c6()
--Pedido enviado a Natura com sucesso! Aguarde o faturamento e processamento do pedido.
 
-# SendActivity_R07OIL()
--Obrigado, conte com a gente!
+
+
 # SendActivity_UxZhzR()
--Opção 2 - 3x no boleto com vencimento para  30, 60 e 90 dias. R$ ${dialog.parcelas3},00
+-Opção 2 - 3x no boleto com vencimento para  30, 60 e 90 dias. R$ ${formatNumber(dialog.parcelas3,2)}
+
 # SendActivity_xaX1KP()
--Opção 1 - 1x no boleto com vencimento para  30 dias.  R$ ${user.valorTotal},00
+-Opção 1 - 1x no boleto com vencimento para  30 dias.  R$ ${formatNumber(user.valorTotal,2)}
 
-
-# SendActivity_STISTq()
-- O boleto será enviado com o pedido.
 # SendActivity_iIIq8U()
-- O número do pedido é: 923482445
+- O número do pedido é: 923482447
+# NumberInput_Prompt_imaeoU()
+- Digite a o número da opção correspondente:
+# SendActivity_kWygDt()
+-O boleto será enviado junto com o pedido
+# SendActivity_c982bX()
+- Pedido enviado a Natura com sucesso! Aguarde o faturamento e processamento do pedido.
+# SendActivity_NLBFQy()
+- Obrigado e conte com a gente!
