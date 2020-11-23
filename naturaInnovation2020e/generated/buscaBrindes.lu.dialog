@@ -1,9 +1,0 @@
-{
-    "$kind": "Microsoft.MultiLanguageRecognizer",
-    "id": "LUIS_buscaBrindes",
-    "recognizers": {
-        "pt-br": "buscaBrindes.pt-br.lu",
-        "": "buscaBrindes.pt-br.lu",
-        "en-us": "buscaBrindes.en-us.lu"
-    }
-}

@@ -68,7 +68,7 @@
             "id": "HUJC1V"
           },
           "property": "dialog.parcelas3",
-          "value": "=user.valorTotal /3"
+          "value": "=user.valorTotal /3 "
         },
         {
           "$kind": "Microsoft.SendActivity",

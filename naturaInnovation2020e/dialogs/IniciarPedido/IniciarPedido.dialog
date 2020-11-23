@@ -33,6 +33,14 @@
           "value": "=0"
         },
         {
+          "$kind": "Microsoft.SetProperty",
+          "$designer": {
+            "id": "51aeGd"
+          },
+          "property": "user.listaProdutos",
+          "value": "= {}"
+        },
+        {
           "$kind": "Microsoft.SendActivity",
           "$designer": {
             "id": "0Egv74"

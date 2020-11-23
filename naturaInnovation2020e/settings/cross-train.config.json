@@ -1,0 +1,102 @@
+{
+  "adicionaProduto.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "mostraResumo.en-us"
+      ]
+    }
+  },
+  "adicionaProduto.pt-br": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "mostraResumo.pt-br"
+      ]
+    }
+  },
+  "buscaBrindes.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "adicionaProduto.en-us",
+        "resgataPontos.en-us"
+      ]
+    }
+  },
+  "buscaBrindes.pt-br": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "adicionaProduto.pt-br",
+        "resgataPontos.pt-br"
+      ]
+    }
+  },
+  "buscaPromo.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "buscaBrindes.en-us",
+        "adicionaProduto.en-us"
+      ]
+    }
+  },
+  "buscaPromo.pt-br": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "buscaBrindes.pt-br",
+        "adicionaProduto.pt-br"
+      ]
+    }
+  },
+  "resgataPontos.en-us": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "formasPagamento.en-us",
+        "formasPagamento.en-us"
+      ]
+    }
+  },
+  "resgataPontos.pt-br": {
+    "rootDialog": false,
+    "triggers": {
+      "": [
+        "formasPagamento.pt-br",
+        "formasPagamento.pt-br"
+      ]
+    }
+  },
+  "naturainnovation2020e.en-us": {
+    "rootDialog": true,
+    "triggers": {
+      "Ajuda": [
+        "Ajuda.en-us"
+      ],
+      "Cancelar": [
+        "Cancelar.en-us"
+      ],
+      "Saudacao": [],
+      "iniciarPedido": [
+        "IniciarPedido.en-us"
+      ]
+    }
+  },
+  "naturainnovation2020e.pt-br": {
+    "rootDialog": true,
+    "triggers": {
+      "Ajuda": [
+        "Ajuda.pt-br"
+      ],
+      "Cancelar": [
+        "Cancelar.pt-br"
+      ],
+      "Saudacao": [],
+      "iniciarPedido": [
+        "IniciarPedido.pt-br"
+      ]
+    }
+  }
+}

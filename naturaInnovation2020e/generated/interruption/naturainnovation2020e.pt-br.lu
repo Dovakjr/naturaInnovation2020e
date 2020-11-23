@@ -1,0 +1,60 @@
+
+> LUIS application information
+> !# @app.versionId = 0.1
+> !# @app.culture = en-us
+> !# @app.luis_schema_version = 3.2.0
+
+
+> # Intent definitions
+
+# Ajuda
+- Preciso de ajuda
+- não endendi
+- como faço isso
+- pode me ajudar
+- como eu faço isso
+
+
+# Cancelar
+- Quero cancelar
+- Cancela por favor
+- não quero mais fazer isso
+- Não quero mais fazer o pedido
+- Preciso cancelar
+- Preciso sair
+
+
+# Saudacao
+- Olá, como você está
+- tudo bem?
+- Oi como vai
+- Olá
+- Oi Nat
+- Olá como vai
+
+
+# iniciarPedido
+- Quero começar
+- Quero fazer um pedido
+- Vamos fazer um pedido
+- Vamos começar
+- Vamos fazer um venda
+- Quero fazer uma venda
+- Iniciar a venda
+- Gostaria de inicar um pedido
+
+
+> # Entity definitions
+
+
+> # PREBUILT Entity definitions
+
+
+> # Phrase list definitions
+
+
+> # List entities
+
+> # RegEx entities
+
+

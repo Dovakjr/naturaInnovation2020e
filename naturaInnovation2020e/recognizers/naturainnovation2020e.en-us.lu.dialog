@@ -1,0 +1,8 @@
+{
+  "$kind": "Microsoft.LuisRecognizer",
+  "id": "LUIS_naturainnovation2020e",
+  "applicationId": "=settings.luis.naturainnovation2020e_en_us_lu.appId",
+  "version": "=settings.luis.naturainnovation2020e_en_us_lu.version",
+  "endpoint": "=settings.luis.endpoint",
+  "endpointKey": "=settings.luis.endpointKey"
+}

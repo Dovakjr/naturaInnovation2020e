@@ -23,7 +23,7 @@
 -Opção 1 - 1x no boleto com vencimento para  30 dias.  R$ ${formatNumber(user.valorTotal,2)}
 
 # SendActivity_iIIq8U()
-- O número do pedido é: 923482447
+- O número do pedido é: 923482447 
 # NumberInput_Prompt_imaeoU()
 - Digite a o número da opção correspondente:
 # SendActivity_kWygDt()

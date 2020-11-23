@@ -1,9 +1,0 @@
-{
-    "$kind": "Microsoft.MultiLanguageRecognizer",
-    "id": "LUIS_naturainnovation2020e",
-    "recognizers": {
-        "pt-br": "naturainnovation2020e.pt-br.lu",
-        "": "naturainnovation2020e.pt-br.lu",
-        "en-us": "naturainnovation2020e.en-us.lu"
-    }
-}
