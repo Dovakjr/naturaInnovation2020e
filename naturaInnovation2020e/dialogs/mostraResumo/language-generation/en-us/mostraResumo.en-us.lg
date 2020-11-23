@@ -7,6 +7,7 @@
 # SendActivity_QsbGls()
 -Total a pagar:  R$ ${formatNumber(user.valorTotal,2)}
 # SendActivity_NjF4Rl()
--${dialog.foreach.value.quantidadeProduto}x ${dialog.foreach.value.nomeProduto}, R$ ${formatNumber( float(dialog.foreach.value.totalProduto),2)}
+-${dialog.foreach.value.quantidadeProduto}x ${dialog.foreach.value.nomeProduto}, R$ ${formatNumber(float(dialog.foreach.value.totalProduto),2)}
+
 
 
